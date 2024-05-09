@@ -1,5 +1,5 @@
 export const obtenerProductos = async () => {
-	const response = await fetch('./data.json')
+	const response = await fetch('https://raw.githubusercontent.com/Dxnrojas/FinalProject/main/Parcial-I/data.json')
 	const data = await response.json()
 	return data
 }
