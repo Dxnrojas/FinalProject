@@ -1,4 +1,4 @@
-import { Select } from './utilsdescription.js'
+import { Select, obtenerProductos } from './utilsdescription.js'
 
 const render = async () => {
 	const data = await obtenerProductos()
@@ -17,6 +17,8 @@ const render = async () => {
                     producto.img,
                     producto.name,
                     producto.price,
+                    producto.description,
+                    producto.favoritos,
                     producto.nodo
                 )
                 const productoRender = select.render()
