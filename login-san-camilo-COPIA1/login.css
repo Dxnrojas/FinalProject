@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Niramit", sans-serif;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+.cuadrado {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+/*inicio izquierda*/
+.izquierda {
+    background-color: rgb(7, 43, 55);
+    height: 100vh;
+    width: 50%;
+    padding: 3rem;
+}
+.arriba {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+.arriba__titulo {
+    font-size: 2rem;
+    color: white;
+}
+.medio {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    vertical-align: bottom;
+}
+.medio__cuadrado1 {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.medio__cuadrado2 {
+    width: 100%;
+    height: 33%;
+    flex-direction: column;
+    align-items: left;
+}
+.medio__cuadrado3 {
+    width: 100%;
+    height: 33%;
+    flex-direction: column;
+    align-items: left;
+}
+.medio__cuadrado1__info1 {
+    width: 40%;
+    height: 70%;
+    font-size: 1.3rem;
+    color: white;
+    background-color: rgb(7, 43, 55);
+    border: none;
+    border-bottom: 0.125rem solid rgb(255, 255, 255);
+
+}
+.medio__cuadrado__info {
+    width: 80%;
+    height: 70%;
+    font-size: 1.3rem;
+    color: white;
+    background-color: rgb(7, 43, 55);
+    border: none;
+    border-bottom: 0.125rem solid rgb(255, 255, 255);
+
+}
+.abajo {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.abajo__texto {
+    height: 30%;
+    width: 80%;
+    color: white;
+    font-size: 0.7rem;
+}
+.abajo__botonsus {
+    height: 20%;
+    width: 50%;
+    background-color: rgb(177, 177, 177);
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 2.5rem;
+    -webkit-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
+}
+.botonsus1 {
+    text-decoration: none;
+    color: white;
+}
+.abajo__iniciarsecion {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.abajo__iniciarsecion__Iniciar {
+    color: white;
+    background-color: rgb(7, 43, 55);
+    border: none;
+
+}
+/*inicio derecha*/
+.derecha {
+    background-image: url(./fotos/Fondo\ blur1_Mesa\ de\ trabajo\ 1.png);
+    background-size: cover;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.derecha__derechap {
+    font-size: 2.5rem;
+    color: white;
+}
+.derecha__login {
+        height: 5%;
+        width: 30%;
+        background-color: rgb(177, 177, 177);
+        color: white;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 2.5rem;
+        -webkit-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
+}
+.derecha__login:hover {
+    background-color:  rgb(209, 162, 74);
+    color: white;
+    transition: 0.5s;
+
+}
+.abajo__botonsus:hover {
+    background-color:  rgb(209, 162, 74);
+    color: white;
+    transition: 0.5s;
+
+}

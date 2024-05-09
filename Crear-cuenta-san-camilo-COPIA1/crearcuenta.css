@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Niramit", sans-serif;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+.cuadrado {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*inicio izquierda*/
+.cuadrado__derecha {
+    background-color: rgb(7, 43, 55);
+    height: 100vh;
+    width: 50%;
+    padding: 3rem;
+}
+.cuadrado__izquierda__derechap {
+    font-size: 2rem;
+    color: white;
+     
+}
+.cuadrado__izquierda__login {
+        height: 5%;
+        width: 30%;
+        background-color: rgb(177, 177, 177);
+        color: white;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 2.5rem;
+        -webkit-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
+}
+
+
+/*inicio derecha*/
+.cuadrado__izquierda {
+    background-image: url(./fotos/Fondo\ blur1_Mesa\ de\ trabajo\ 1.png);
+    background-size: cover;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cuadrado__derecha__arriba {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;   
+}
+.cuadrado__derecha__arriba--titulo {
+    font-size: 2rem;
+    color: white;
+}
+.cuadrado__medio {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    vertical-align: bottom;
+}
+.cuadrado__medio--cuadrado1 {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.cuadrado__medio--cuadrado2 {
+    width: 100%;
+    height: 33%;
+    flex-direction: column;
+    align-items: left;
+}
+.cuadrado__medio--cuadrado3 {
+    width: 20%;
+    height: 7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+.cuadrado__medio--cuadrado1__info1 {
+    width: 40%;
+    height: 70%;
+    font-size: 1.3rem;
+    color: white;
+    background-color: rgb(7, 43, 55);
+    border: none;
+    border-bottom: 0.125rem solid rgb(255, 255, 255);
+    
+
+}
+.info {
+    width: 40%;
+    height: 70%;
+    font-size: 1.3em;
+    color: white;
+    background-color: rgb(7, 43, 55);
+    border: none;
+    border-bottom: 0.125rem solid rgb(255, 255, 255);
+}
+.abajo {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.texto {
+    height: 30%;
+    width: 80%;
+    color: white;
+    font-size: 0.7em;
+}
+.abajo__botonsus {
+    height: 20%;
+    width: 50%;
+    background-color: rgb(177, 177, 177);
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 2.5rem;
+    -webkit-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
+}
+.abajo__botonsus:hover {
+    background-color:  rgb(209, 162, 74);
+    color: white;
+    transition: 0.5s;
+
+}
+.botonsus1 {
+    color: white;
+    text-decoration: none;
+}
+.cuadrado__izquierda__login:hover {
+    background-color:  rgb(209, 162, 74);
+    color: white;
+    transition: 0.5s;
+
+}
+
+.abajo__iniciarsecion {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.abajo__iniciarsecion__Iniciar {
+    color: white;
+    background-color: rgb(7, 43, 55);
+    border: none;
+
+}
