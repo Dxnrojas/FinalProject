@@ -82,7 +82,8 @@ body {
 /*Inicio parte 2*/
 .parte2 {
     background-image: url(./fotos/Frame\ 2.png);
-    width: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
     height: 100vh;
 }
 
