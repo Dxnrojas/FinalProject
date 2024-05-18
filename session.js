@@ -25,9 +25,6 @@ export const iniciarSesion = (email, password) => {
   };
   
   export const registrarUsuario = (name, apellido, email, password) => {
-    if (password !== confirmPassword) {
-      throw new Error("Las contrasenas no coinciden");
-    }
   
     const usuarios = obtenerUsuarios();
   
