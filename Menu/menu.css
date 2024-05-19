@@ -50,10 +50,11 @@
     background-color:#D1A24A;
     color: white;
     text-decoration: none;
-    height: 10rem;
+    height: 12rem;
     width: 16rem;
     border-radius: 0.5rem;
     padding: 0.5rem;
+    gap: 2px;
 }
 .menuvertical__texto {
     color: white;
@@ -407,5 +408,43 @@ input{
     filter: blur(0.5rem);
     position: relative;
 }
+
+.ov-btn-slide-left {
+    gap: 1rem;
+    background: #2F4550; /* color de fondo */
+    color: #ffffff; /* color de fuente */
+    border: 1px solid #2F4550; /* tamaño y color de borde */
+    padding: 4px 4px;
+    border-radius: 6px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .ov-btn-slide-left:hover {
+    color: #fff; /* color de fuente hover */
+  }
+  .ov-btn-slide-left::after {
+    content: "";
+    background: #23343b; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  .ov-btn-slide-left:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
 
 
