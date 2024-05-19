@@ -10,7 +10,7 @@ const render = async () => {
 
     try {
       iniciarSesion(email, password);
-      window.location.href = "../Pagina-1-san-camilo-COPIA1/index.html";
+      window.location.href = "../Parcial-I/main.html";
     } catch (error) {
       alert(error.message);
     }

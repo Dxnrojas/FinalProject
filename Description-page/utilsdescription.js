@@ -1,3 +1,5 @@
+import { agregarFavorito } from '../session.js';
+
 export const obtenerProductos = async () => {
 	const response = await fetch('https://raw.githubusercontent.com/Dxnrojas/FinalProject/main/Parcial-I/data.json')
 	const data = await response.json()
@@ -59,9 +61,12 @@ export class Select {
        add.classList.add('añadir');
        bottomblock.appendChild(add);
 
-       const fav = document.createElement('p');
+       const fav = document.createElement('button');
        fav.classList.add('añadir__text');
        fav.textContent = "Añadir a Favoritos";
+       fav.addEventListener('click', () => {
+            agregarFavorito(this.#id);
+        });
        add.appendChild(fav);
 
        return block
