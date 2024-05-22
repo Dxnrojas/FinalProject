@@ -1,6 +1,7 @@
+import { obtenerProductos } from "./Description-page/utilsdescription.js";
+
 const USERS_KEY = "usuarios";
 const ACTIVE_USER = "usuario";
-const FAVORITOS_KEY = "favoritos";
 
 export const iniciarSesion = (email, password) => {
   const usuarios = obtenerUsuarios();
@@ -56,6 +57,7 @@ export const registrarUsuario = (name, apellido, email, password) => {
     apellido,
     email,
     password,
+    favoritos: [],
   });
 
   localStorage.setItem(USERS_KEY, JSON.stringify(usuarios));
@@ -83,29 +85,42 @@ export const cerrarSesion = () => {
   localStorage.removeItem(ACTIVE_USER);
 };
 
-export const obtenerFavoritos = () => {
-  const favoritos = localStorage.getItem(FAVORITOS_KEY);
+//Obtiene los favoritos del usuario en sesion
+export const obtenerFavoritos = async () => {
+  const user = obtenerUsuarioEnSesion();
+  const favoritos = [];
 
-  if (favoritos) {
-    return JSON.parse(favoritos);
+  const data = await obtenerProductos();
+
+  for (const llave in data) {
+    const listaProductos = data[llave]; //obteniendo la lista de productos que le corresponde a esa llave
+
+    //Recorrer la lista de productos buscando aquellos productos cuyo ID este en el arreglo de favoritos del usuario.
+    for(const product of listaProductos){
+      if (user.favoritos.includes(product.id)) {
+        favoritos.push(product);
+      };
+    }
   }
 
-  return {};
+
+  return favoritos;
 };
 
+//Agrega favoritos al localStorage
 export const agregarFavorito = (idProducto) => {
-  const usuario = obtenerUsuarioEnSesion();
-  const favoritos = obtenerFavoritos();
+  const usuarios = obtenerUsuarios(); //Arreglo
+  const usuario = usuarios.find(
+    (usuario) => usuario.id === parseInt(localStorage.getItem(ACTIVE_USER))
+  ); // Encuentrame el usuario que tenga el id del usuario activo.
 
-  if(usuario.id in favoritos){ // Si el usuario ya tiene favoritos
-    if(favoritos[usuario.id].includes(idProducto)){
-      throw new Error("El producto ya se encuentra en favoritos");
-    }
-    favoritos[usuario.id].push(idProducto);
-  }else{
-    favoritos[usuario.id] = [idProducto]; // Crear un array con el id del producto
-  };
+  if (usuario.favoritos.includes(idProducto)) {
+    //usuario.favoritos estoy accediendo a la propiedad favoritos del objeto usuario.
+    throw new Error("El producto ya se encuentra en favoritos");
+  }
+  usuario.favoritos.push(idProducto);
 
-  localStorage.setItem(FAVORITOS_KEY, JSON.stringify(favoritos));
-  
+  localStorage.setItem(USERS_KEY, JSON.stringify(usuarios));
 };
+
+console.log(2*2)
