@@ -87,8 +87,8 @@ export const actualizarUsuarioEnSesion = (nuevaPassword) => {
 
   if (usuarioActivo) {
     usuarioActivo.password = nuevaPassword;
-    const usuarioIndex = usuarios.findIndex((u) => u.id === usuarioActivo.id); //El método findIndex() devuelve el índice del primer elemento de un array que cumpla con la función de prueba proporcionada.
-    usuarios[usuarioIndex] = usuarioActivo;
+    const usuario1 = usuarios.findIndex((u) => u.id === usuarioActivo.id); //El método findIndex() devuelve el índice del primer elemento de un array que cumpla con la función de prueba proporcionada.
+    usuarios[usuario1] = usuarioActivo;
     localStorage.setItem(USERS_KEY, JSON.stringify(usuarios));
   }
 };
