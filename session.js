@@ -86,9 +86,9 @@ export const actualizarUsuarioEnSesion = (nuevaPassword) => {
   const usuarioActivo = obtenerUsuarioEnSesion();
 
   if (usuarioActivo) {
-    usuarioActivo.password = nuevaPassword;
-    const usuario1 = usuarios.findIndex((u) => u.id === usuarioActivo.id); //El método findIndex() devuelve el índice del primer elemento de un array que cumpla con la función de prueba proporcionada.
-    usuarios[usuario1] = usuarioActivo;
+    usuarioActivo.password = nuevaPassword; //
+    const usuario1 = usuarios.find((u) => u.id === usuarioActivo.id);
+    usuario1.password = nuevaPassword; //El método findIndex() devuelve el índice del primer elemento de un array que cumpla con la función de prueba proporcionada.
     localStorage.setItem(USERS_KEY, JSON.stringify(usuarios));
   }
 };
@@ -108,13 +108,12 @@ export const obtenerFavoritos = async () => {
     const listaProductos = data[llave]; //obteniendo la lista de productos que le corresponde a esa llave
 
     //Recorrer la lista de productos buscando aquellos productos cuyo ID este en el arreglo de favoritos del usuario.
-    for(const product of listaProductos){
+    for (const product of listaProductos) {
       if (user.favoritos.includes(product.id)) {
         favoritos.push(product);
-      };
+      }
     }
   }
-
 
   return favoritos;
 };
@@ -123,14 +122,13 @@ export const obtenerFavoritos = async () => {
 export const agregarFavorito = (idProducto) => {
   const usuarios = obtenerUsuarios(); //Arreglo
   const usuario = usuarios.find(
-    (usuario) => usuario.id === parseInt(localStorage.getItem(ACTIVE_USER))
+    (usuario) => usuario.id === parseInt(localStorage.getItem(ACTIVE_USER)) //Cambiar por la funcion obtenerUsuario en sesion
   ); // Encuentrame el usuario que tenga el id del usuario activo.
 
-  if (usuario.favoritos.includes(idProducto)) {
+  if (!usuario.favoritos.includes(idProducto)) {
     //usuario.favoritos estoy accediendo a la propiedad favoritos del objeto usuario.
-    throw new Error("El producto ya se encuentra en favoritos");
+    usuario.favoritos.push(idProducto);
   }
-  usuario.favoritos.push(idProducto);
 
   localStorage.setItem(USERS_KEY, JSON.stringify(usuarios));
 };
@@ -142,4 +140,4 @@ export const revisarSesion = () => {
   if (!usuario) {
     window.location.href = "../Pagina-1-san-camilo-COPIA1/index.html";
   }
-}
+};
