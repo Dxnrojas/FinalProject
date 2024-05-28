@@ -81,6 +81,18 @@ export const obtenerUsuarioEnSesion = () => {
   return null;
 };
 
+export const actualizarUsuarioEnSesion = (nuevaPassword) => {
+  const usuarios = obtenerUsuarios();
+  const usuarioActivo = obtenerUsuarioEnSesion();
+
+  if (usuarioActivo) {
+    usuarioActivo.password = nuevaPassword;
+    const usuarioIndex = usuarios.findIndex((u) => u.id === usuarioActivo.id); //El método findIndex() devuelve el índice del primer elemento de un array que cumpla con la función de prueba proporcionada.
+    usuarios[usuarioIndex] = usuarioActivo;
+    localStorage.setItem(USERS_KEY, JSON.stringify(usuarios));
+  }
+};
+
 export const cerrarSesion = () => {
   localStorage.removeItem(ACTIVE_USER);
 };
@@ -123,6 +135,7 @@ export const agregarFavorito = (idProducto) => {
   localStorage.setItem(USERS_KEY, JSON.stringify(usuarios));
 };
 
+//confirmar que el usuario esta en sesion
 export const revisarSesion = () => {
   const usuario = obtenerUsuarioEnSesion();
 
