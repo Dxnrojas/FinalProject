@@ -1,6 +1,10 @@
 import { Select, obtenerProductos } from './utilsdescription.js'
+import { revisarSesion } from '../session.js'
 
 const render = async () => {
+
+    revisarSesion();
+    
 	const data = await obtenerProductos()
 	const campo3 = document.querySelector('#campo3');
     

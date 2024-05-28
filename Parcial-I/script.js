@@ -1,6 +1,10 @@
 import { obtenerProductos, panaderia, brunch, bebidasCaliente } from './utils.js'
+import { revisarSesion } from '../session.js'
 
 const render = async () => {
+	
+	revisarSesion();
+
 	const data = await obtenerProductos()
 	const campo1 = document.querySelector('#campo1')
 
@@ -45,7 +49,7 @@ const render = async () => {
 		const productoRender = bebidasCalientes.render()
 
 		campo3.appendChild(productoRender)
-	}
+	};
 }
 
 document.addEventListener('DOMContentLoaded', render)

@@ -123,4 +123,10 @@ export const agregarFavorito = (idProducto) => {
   localStorage.setItem(USERS_KEY, JSON.stringify(usuarios));
 };
 
-console.log(2*2)
+export const revisarSesion = () => {
+  const usuario = obtenerUsuarioEnSesion();
+
+  if (!usuario) {
+    window.location.href = "../Pagina-1-san-camilo-COPIA1/index.html";
+  }
+}

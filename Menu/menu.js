@@ -1,15 +1,16 @@
-import { cerrarSesion } from "../session.js";
+import { cerrarSesion, revisarSesion } from "../session.js";
 
 const render = async () => {
-    const button = document.querySelector("#button");
-  
-    button.addEventListener("click", (e) => {
-      e.preventDefault();
+  revisarSesion();
+  const button = document.querySelector("#button");
 
-      cerrarSesion();
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
 
-      window.location.href = "../Pagina-1-san-camilo-COPIA1/index.html";
-    });
-  };
-  
-  document.addEventListener("DOMContentLoaded", render);
+    cerrarSesion();
+
+    window.location.href = "../Pagina-1-san-camilo-COPIA1/index.html";
+  });
+};
+
+document.addEventListener("DOMContentLoaded", render);

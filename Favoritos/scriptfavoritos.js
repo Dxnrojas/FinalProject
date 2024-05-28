@@ -1,7 +1,9 @@
 import { Favoritos } from './utilsfavoritos.js'
-import { obtenerFavoritos } from "../session.js";
+import { obtenerFavoritos, revisarSesion } from "../session.js";
 
 const renderFavs = async () => {
+
+	revisarSesion();
 	const data = await obtenerFavoritos()
 	const campo1 = document.querySelector('#campo1')
 
