@@ -25,6 +25,7 @@ export class Favoritos {
 		const imgBlockInnerblocks = document.createElement('img')
 		imgBlockInnerblocks.src = this.img
 		imgBlockInnerblocks.alt = this.name
+		imgBlockInnerblocks.classList.add('block__innerblocks')
 		block__innerblocks.appendChild(imgBlockInnerblocks)
 
 		const bottomblock = document.createElement('div')
