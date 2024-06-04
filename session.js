@@ -141,3 +141,13 @@ export const revisarSesion = () => {
     window.location.href = "../Pagina-1-san-camilo-COPIA1/index.html";
   }
 };
+
+//Elimina favoritos del localStorage
+export const actualizarFavoritosLocalStorage = (favoritos) => {
+  const usuarios = obtenerUsuarios(); //Busco el usuario
+  const usuario = usuarios.find(
+    (usuario) => usuario.id === parseInt(localStorage.getItem(ACTIVE_USER)));//Buscar el usuario que tiene la sesion activa
+  usuario.favoritos = favoritos; //Actualizar lista de favoritos con los elementos eliminados
+
+  localStorage.setItem(USERS_KEY, JSON.stringify(usuarios));
+};
