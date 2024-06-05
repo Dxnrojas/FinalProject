@@ -23,7 +23,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #2F4550;
+    background-color: #312B2D;
 }
 
 .header2 {
@@ -189,9 +189,6 @@ div img.buscadorLupa{
     justify-content: center;
     border-radius: 0.625rem;
     align-items: center;
-    -webkit-box-shadow: 10px 10px 24px 2px rgba(122,122,122,1);
-    -moz-box-shadow: 10px 10px 24px 2px rgba(122,122,122,1);
-    box-shadow: 10px 10px 24px 2px rgba(122,122,122,1);
 }
 
 .block__innerblocks {
@@ -214,7 +211,7 @@ div img.buscadorLupa{
     align-items: center;
     gap: 1rem;
     padding: .5rem;
-    background-color: #2F4550
+    background-color: #1e1e1e;
     
 }
 
@@ -437,4 +434,7 @@ div button.more{
    background-color: #D1A24A;
    color: white;
 }
+
+.block:hover{-webkit-transform:scale(1.1);transform:scale(1.1);}
+.block {overflow:hidden;}
 
