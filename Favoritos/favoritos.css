@@ -15,9 +15,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
-
-
 }
+
 .backimg{
     border: solid;
     width: 150.125rem;
@@ -30,7 +29,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #231e20;
+    background-color: #1e1e1e;
 }
 
 .header2 {
@@ -41,6 +40,7 @@
     align-items: center;
     background-color: #D1A24A;
     font-size: 1.3rem;
+    border-radius: 0 0 20px 20px;
 }
 
 .salado{
@@ -170,10 +170,6 @@ input#buscador {
  justify-content: center;
  border-radius: 0.625rem;
  align-items: center;
- -webkit-box-shadow: -4px 3px 55px -9px rgba(28,42,48,1);
--moz-box-shadow: -4px 3px 55px -9px rgba(28,42,48,1);
-box-shadow: -4px 3px 55px -9px rgba(28,42,48,1);
- 
 }
 
 
@@ -264,19 +260,14 @@ box-shadow: -4px 3px 55px -9px rgba(28,42,48,1);
     align-items: center;
     gap: 1rem;
     padding: .5rem;
-    background-color: white;
+    background-color: #1e1e1e ;
 }
 
 .block__bottomblock--letras{
     font-size: 1rem;
     text-align: center;
-    color: #2F4550;
+    color: #ffffff;
     font-weight: bold;
-}
-
-.block__bottomblock--precio{
-    color: #2F4550;
-
 }
 
 input{
@@ -301,4 +292,14 @@ input{
     align-items: center;
     gap: 2rem;
     padding: 2rem;
+}
+
+.more{
+    background-color:#D1A24A;
+    width: 5vw;
+    height: 4vh;
+    border-radius: 0.625rem;
+    border: none;
+    background-color: #D1A24A;
+    color: white;
 }

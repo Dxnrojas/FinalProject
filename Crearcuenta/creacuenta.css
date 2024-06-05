@@ -19,7 +19,7 @@ body {
 }
 /*inicio izquierda*/
 .izquierda {
-    background-color: rgb(7, 43, 55);
+    background-color: #1e1e1e;
     height: 100vh;
     width: 50%;
     padding: 3rem;
@@ -69,7 +69,7 @@ body {
     height: 70%;
     font-size: 1.3rem;
     color: white;
-    background-color: rgb(7, 43, 55);
+    background-color: #1e1e1e;
     border: none;
     border-bottom: 0.125rem solid rgb(255, 255, 255);
 
@@ -79,7 +79,7 @@ body {
     height: 70%;
     font-size: 1.3rem;
     color: white;
-    background-color: rgb(7, 43, 55);
+    background-color:#1e1e1e;
     border: none;
     border-bottom: 0.125rem solid rgb(255, 255, 255);
 
@@ -111,8 +111,22 @@ body {
     box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
 }
 .botonsus1 {
+    background-color:  rgb(209, 162, 74);
     text-decoration: none;
     color: white;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 20px;
+    
+}
+.botonsus1:hover {
+    background-color:  rgb(179, 139, 65);
+    text-decoration: none;
+    color: white;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 20px;
+    transition: 0.5s;
 }
 .abajo__iniciarsecion {
     height: 50%;
@@ -124,7 +138,7 @@ body {
 }
 .abajo__iniciarsecion__Iniciar {
     color: white;
-    background-color: rgb(7, 43, 55);
+    background-color: #1e1e1e;
     border: none;
 
 }
@@ -144,23 +158,13 @@ body {
     color: white;
 }
 .derecha__login {
-        height: 5%;
-        width: 30%;
-        background-color: rgb(177, 177, 177);
-        color: white;
-        font-size: 1.5rem;
-        border: none;
-        border-radius: 2.5rem;
-        -webkit-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
-    -moz-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
-    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
-}
-.derecha__login:hover {
+    width: 20vw;
+    height: 5vh;
+    border-radius: 20px;
+    text-decoration: none;
     background-color:  rgb(209, 162, 74);
-    color: white;
-    transition: 0.5s;
-
 }
+
 .abajo__botonsus:hover {
     background-color:  rgb(209, 162, 74);
     color: white;

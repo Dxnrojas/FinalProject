@@ -10,7 +10,7 @@ body {
     height: 100%;
 }
 .cuadrado {
-    background-image: url(./fotos/Fondo_Mesa\ de\ trabajo\ 1.png);
+    background-color: #1e1e1e;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -18,6 +18,12 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+
+.izquierda__nada{
+    background-image: url(../Description-page/resources/user.jpg);
+    width: 20vw;
+    height: 20vh;
 }
 
 /*inicio izquierda*/
@@ -50,9 +56,6 @@ body {
         font-size: 1rem;
         border: none;
         border-radius: 2.5rem;
-        -webkit-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
-    -moz-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
-    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
 }
 .izquierda__login:hover {
     background-color:  rgb(209, 162, 74);
@@ -125,7 +128,8 @@ body {
 }
 .cuadritod__info1 {
     height: 2rem;
-    width: 10rem;
+    width: 13rem;
+    padding: 8px;
     background-color: rgb(187, 187, 187);
     color: white;
     font-size: 1rem;
@@ -133,10 +137,10 @@ body {
     border: none;
     align-items: center;
     justify-content: center;
-    -webkit-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
-    -moz-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
-    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
-    padding-left: 0.938rem;
+    -webkit-box-shadow: -4px 22px 27px -9px rgba(209,162,74,0.59);
+    -moz-box-shadow: -4px 22px 27px -9px rgba(209,162,74,0.59);
+    box-shadow: -4px 22px 27px -9px rgba(209,162,74,0.59);
+
 }
 
 .abajo {
@@ -198,6 +202,7 @@ body {
     justify-content: space-between;
 }
 .abajo__botonchiqui--peque{
+    margin-top: 20px;
     height: 1.875rem;
     width: 5rem;
     background-color: rgb(110, 214, 84);
@@ -210,10 +215,6 @@ body {
     border: none;
     border-radius: 2.5rem;
     align-items: center;
-    -webkit-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
-    -moz-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
-    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
-
 }
 .abajo__botonchiqui--peque2{
     height: 1.875rem;
@@ -227,8 +228,14 @@ body {
     justify-content: center;
     border: none;
     border-radius: 2.5rem;
-    -webkit-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
-    -moz-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
-    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.59);
+    
 
+}
+
+.contenedor-form{
+    width: 40vw;
+    height: 60vh;
+    background-color: #D1A24A;
+    padding: 25px;
+    border-radius: 20px;
 }
