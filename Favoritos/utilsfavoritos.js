@@ -47,7 +47,7 @@ export class Favoritos {
 
     block.appendChild(bottomblock);
 
-    //utilsfavortios.js: Eliminar favoritos del localStorage
+    //Eliminar favoritos del localStorage
     button.addEventListener("click", () => {
       const favoritos = obtenerUsuarioEnSesion().favoritos;
 
